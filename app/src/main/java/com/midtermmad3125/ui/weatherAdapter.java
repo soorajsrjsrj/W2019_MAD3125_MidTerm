@@ -34,7 +34,8 @@ public class weatherAdapter extends ArrayAdapter<ListWeather> {
         TextView u3 = (TextView) convertView.findViewById(R.id.humidity);
         TextView u4 = (TextView) convertView.findViewById(R.id.speed);
         // Populate the data into the template view using the data object
-        u1.setText(u.getDt());
+      //  u1.setText(u.getDt());
+        u1.setText("spaceeeeee");
         u2.setText(u.getHumidity());
         u3.setText(u.getPressure());
         u4.setText(u.getSpeed());

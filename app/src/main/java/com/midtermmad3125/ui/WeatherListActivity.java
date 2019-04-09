@@ -30,12 +30,13 @@ public class WeatherListActivity extends AppCompatActivity
         setContentView(R.layout.activity_weather_list);
 
         processJSON();
-        ArrayList<ListWeather> arrayOfUsers = new ArrayList<ListWeather>();
+        ArrayList<ListWeather> weatherlist = new ArrayList<ListWeather>();
 // Create the adapter to convert the array to views
-        weatherAdapter adapter = new weatherAdapter(WeatherListActivity.this,arrayOfUsers);
+        weatherAdapter adapter = new weatherAdapter(WeatherListActivity.this,weatherlist);
 // Attach the adapter to a ListView
         ListView listView = (ListView) findViewById(R.id.lvItems);
         listView.setAdapter(adapter);
+
 
     }
     private void processJSON(){
