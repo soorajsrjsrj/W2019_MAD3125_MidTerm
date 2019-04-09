@@ -26,7 +26,6 @@ import java.util.List;
 public class MainCityActivity extends AppCompatActivity
 {
     List<Weather> w = new ArrayList<>();
-
     TextView t1,t2,t3,t4,t5;
     Button b1;
     Weather w1;
@@ -39,8 +38,6 @@ public class MainCityActivity extends AppCompatActivity
         b1 = findViewById(R.id.weatherdetail);
         t1 = findViewById(R.id.cityname);
         t2 = findViewById(R.id.latitude);
-        t1.setText(w1.getMcountry());
-        t2.setText(w1.getMcity());
 
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +50,8 @@ public class MainCityActivity extends AppCompatActivity
         processJSON();
 
 
+        //t1.setText(w.indexOf(0));
+       // t2.setText(w1.getMcity());
 
 
 
@@ -61,7 +60,7 @@ public class MainCityActivity extends AppCompatActivity
     private void processJSON(){
 
 
-        List<Weather> w = new ArrayList<>();
+       // List<Weather> w = new ArrayList<>();
         String jsonString = loadJSONFromAsset();
         if(jsonString!=null){
             try {
